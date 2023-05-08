@@ -1,3 +1,5 @@
+#include "lists.h"
+
 /**
  * check_cycle - check for cycles
  * @list: head of linked list
