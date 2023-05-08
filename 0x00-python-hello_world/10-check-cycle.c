@@ -71,19 +71,15 @@ void free_listint(listint_t *head)
 
 int check_cycle(listint_t *list)
 {
-	int n = 0;
-	int i = 0;
-	int *arr = malloc(sizeof(int) * 1);
-	listint_t *current = list;
-
-	while (current != NULL)
+	listint_t *current_one = list->next;
+	listint_t *current_two = list->next->next;
+	
+	while (current_one != current_two)
 	{
-		arr[n] = current->n;
-		for (i = 0; i < n; i++)
-			if (current->n == arr[i])
-				return (1);
-		arr = realloc(arr, (++n + 1) * sizeof(int));
-		current = current->next;
+		if (current_one == NULL || current_two == NULL)
+			return (0);
+		current_one = current_one->next;
+		current_two = current_two->next->next;
 	}
-	return (0);
+	return (1);
 }
