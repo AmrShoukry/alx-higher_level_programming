@@ -9,11 +9,13 @@
 int is_palindrome(listint_t **head)
 {
 	listint_t *top = *head;
-	listint_t *current = top->next;
+	listint_t *current;
 	listint_t *mirror;
 
 	if (top == NULL)
 		return (1);
+
+	current = top->next;
 
 	while (current != NULL)
 	{
