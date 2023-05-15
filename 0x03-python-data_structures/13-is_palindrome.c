@@ -22,9 +22,6 @@ int is_palindrome(listint_t **head)
 		if  (top == mirror || top->next == mirror)
 			return (1);
 
-		if (current == mirror)
-			return (0);
-
 		if (top->n == current->n)
 		{
 			if (top == *head)
