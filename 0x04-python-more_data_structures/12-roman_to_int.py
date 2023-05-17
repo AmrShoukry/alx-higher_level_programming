@@ -2,29 +2,14 @@
 def roman_to_int(roman_string):
     if roman_string is None or type(roman_string) is not str:
         return 0
+    dictionary = {"I": 1, "V": 5, "X": 10, "L": 50, "C": 100, "D": 500}
+    dictionary["M"] = 1000
     result = 0
     number = 0
-    Icheck = False
+    previous = 0
     for char in roman_string:
-        if char == "I":
-            number = 1
-            Icheck = True
-        elif char == "V":
-            number = 5
-        elif char == "X":
-            number = 10
-        elif char == "L":
-            number = 50
-        elif char == "C":
-            number = 100
-        elif char == "D":
-            number = 500
-        elif char == "M":
-            number = 1000
-
-        result = result + number
-        if char != "I":
-            if Icheck is True:
-                result = result - 2
-            Icheck = False
+        if dictionary[char] > previous and previous != 0:
+            result = result - (previous * 2)
+        result = result + dictionary[char]
+        previous = dictionary[char]
     return result
