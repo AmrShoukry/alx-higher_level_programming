@@ -9,7 +9,8 @@
 
 void print_python_list_info(PyObject *p)
 {
-	pyListObject *list;
+	PyListObject *list;
+	int i;
 
 	list = (PyListObject *)p;
 
