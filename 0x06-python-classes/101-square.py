@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" Task5 """
+""" Task101 """
 
 
 class Square:
@@ -49,5 +49,5 @@ class Square:
                     print("#", end="")
                 print()
 
-    def __str__:
+    def __str__(self):
         my_print()
