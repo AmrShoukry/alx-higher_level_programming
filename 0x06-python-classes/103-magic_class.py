@@ -3,7 +3,8 @@
 
 
 import math
-    
+
+
 class MagicClass:
     """ Class documentation """
 
