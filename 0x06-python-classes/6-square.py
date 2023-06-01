@@ -23,7 +23,7 @@ class Square:
         if value < 0:
             raise ValueError("size must be >= 0")
         self.__size = value
-    
+
     @property
     def position(self):
         return self.__position
@@ -33,7 +33,6 @@ class Square:
         if type(value) is not tuple and len(value) != 2:
             raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = value
-
 
     def my_print(self):
         if self.__size == 0:
