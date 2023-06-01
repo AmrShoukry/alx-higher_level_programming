@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""
+    Task0
+"""
 
 class Square:
-    pass
+    """ An empty class """
