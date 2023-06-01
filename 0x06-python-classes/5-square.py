@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" Task4 """
+""" Task5 """
 
 
 class Square:
@@ -22,3 +22,9 @@ class Square:
         if value < 0:
             raise ValueError("size must be >= 0")
         self.__size = value
+
+    def my_print(self):
+        for i in range(self.__size):
+            for j in range(self.__size):
+                print("#", end="")
+            print()
