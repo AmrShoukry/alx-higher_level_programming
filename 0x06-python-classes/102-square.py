@@ -82,5 +82,3 @@ class Square:
 
     def __ne__(self, other):
         return self.__size != other.__size
-
-
