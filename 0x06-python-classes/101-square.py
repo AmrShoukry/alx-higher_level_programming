@@ -50,4 +50,17 @@ class Square:
                 print()
 
     def __str__(self):
-        my_print()
+        if self.__size == 0:
+            return ""
+        else:
+            text = ""
+            for i in range(self.__position[1]):
+                text += "\n"
+            for i in range(self.__size):
+                for j in range(self.__position[0]):
+                    text += " "
+                for j in range(self.__size):
+                    text += "#"
+                if i != self.size - 1:
+                    text += "\n"
+            return text
