@@ -24,8 +24,6 @@ class Rectangle:
                 string += "#"
             if row != self.__height - 1:
                 string += "\n"
-        if string == "":
-            string += "\n"
         return string
 
     @property
