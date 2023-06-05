@@ -48,7 +48,7 @@ class Rectangle:
         if Rectangle.area(rect_1) >= Rectangle.area(rect_2):
             return rect_1
         return rect_2
-  
+
     @property
     def width(self):
         return self.__width
