@@ -6,6 +6,7 @@ class Rectangle:
     """ Class Rectangle """
 
     number_of_instances = 0
+    print_symbol = "#"
 
     def __init__(self, width=0, height=0):
         self.width = width
@@ -20,21 +21,13 @@ class Rectangle:
             return 0
         return 2 * (self.__width + self.__height)
 
-    def print_symbol(self, symbol="#"):
-        if (self.__height == 0 or self.__width == 0):
-            return
-        for row in range(self.__height):
-            for column in range(self.__width):
-                print(symbol, end="")
-            print()
-
     def __str__(self):
         string = ""
         if (self.__height == 0 or self.__width == 0):
             return string
         for row in range(self.__height):
             for column in range(self.__width):
-                string += "#"
+                string += f"{self.print_symbol}"
             if row != self.__height - 1:
                 string += "\n"
         return string
