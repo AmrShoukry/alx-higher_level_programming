@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" Task 2 """
+""" Task 3 """
 
 
 class Rectangle:
@@ -16,7 +16,16 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             return 0
         return 2 * (self.__width + self.__height)
-    
+
+    def __str__(self):
+        string = ""
+        for row in self.__height:
+            for column in self.__width:
+                string += "#"
+            if row != self.__height - 1:
+                string += "\n"
+        return string
+
     @property
     def width(self):
         return self.__width
