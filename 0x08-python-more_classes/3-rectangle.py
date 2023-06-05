@@ -19,8 +19,8 @@ class Rectangle:
 
     def __str__(self):
         string = ""
-        for row in self.__height:
-            for column in self.__width:
+        for row in range(self.__height):
+            for column in range(self.__width):
                 string += "#"
             if row != self.__height - 1:
                 string += "\n"
