@@ -45,7 +45,9 @@ class Rectangle:
             raise TypeError("rect_1 must be an instance of Rectangle")
         if rect_2.__class__.__name__ != "Rectangle":
             raise TypeError("rect_2 must be an instance of Rectangle")
-        return area(rect_1) >= area(rect_2)
+        if Rectangle.area(rect_1) >= Rectangle.area(rect_2):
+            return rect_1
+        return rect_2
 
     @property
     def width(self):
