@@ -1,0 +1,22 @@
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+>>> text_indentation(5)
+Traceback (most recent call last):
+  ...
+TypeError: text must be a string
+
+
+
+>>> text_indentation([7, 10])
+Traceback (most recent call last):
+  ...
+TypeError: text must be a string
+
+
+
+>>> text_indentation("Amr Shoukry.")
+Amr Shoukry
+<BLANKLINE>
+>>> text_indentation("Amr Shoukry.    Amr Mohamed Shoukry")
+Amr Shoukry
+<BLANKLINE>
+Amr Mohamed Shoukry
