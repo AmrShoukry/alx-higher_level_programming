@@ -1,0 +1,41 @@
+>>> add_integer = __import__('0-add_integer').add_integer
+>>> add_integer(1, 2)
+3
+
+>>> add_integer(0, 5)
+5
+
+>>> add_integer(3.14, -2)
+1
+
+>>> add_integer(0, 0)
+0
+
+>>> add_integer(Amr, 7)
+Traceback (most recent call last):
+  ...
+NameError: name 'Amr' is not defined
+
+>>> add_integer(7, Shoukry)
+Traceback (most recent call last):
+  ...
+NameError: name 'Shoukry' is not defined
+
+>>> add_integer(Amr, Shoukry)
+Traceback (most recent call last):
+  ...
+NameError: name 'Amr' is not defined
+
+>>> add_integer([4], 8)
+Traceback (most recent call last):
+  ...
+TypeError: a must be an integer
+
+>>> add_integer(True, 8)
+9
+
+>>> add_integer(False, 8)
+8
+
+>>> add_integer(8)
+106
