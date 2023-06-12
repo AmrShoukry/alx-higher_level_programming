@@ -1,7 +1,7 @@
 >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 >>> bg = BaseGeometry()
 >>> try:
-...     bg.integer_validator("name", "John")
+...     bg.integer_validator("name", "Amr")
 ... except Exception as e:
 ...     print("[{}] {}".format(e.__class__.__name__, e))
 ... 
@@ -13,3 +13,8 @@
 ...     print("[{}] {}".format(e.__class__.__name__, e))
 ... 
 [ValueError] Age must be greater than 0
+
+>>> bg.integer_validator("name", "Amr")
+Traceback (most recent call last):
+  ...
+TypeError: name must be an integer
