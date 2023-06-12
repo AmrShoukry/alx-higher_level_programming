@@ -1,6 +1,7 @@
 #!/usr/bin/python3
-""" Task 0 """
+""" Task """
 
 
 def lookup(obj):
+    """ Function """
     return dir(obj)
