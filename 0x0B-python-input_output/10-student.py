@@ -14,7 +14,7 @@ class Student:
         attributes = []
         if type(attrs) is list:
             for attribute in attrs:
-                if attribute in self.__dict__:
+                if attribute in self.__dict__ and type(attribute) is str:
                     attributes.append(attribute)
             if len(attributes) == 0:
                 return self.__dict__
