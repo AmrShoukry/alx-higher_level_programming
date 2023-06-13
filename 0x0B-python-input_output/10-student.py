@@ -17,8 +17,7 @@ class Student:
                 if attribute in self.__dict__:
                     attributes.append(attribute)
             if len(attributes) == 0:
-                return self.__dict__     
+                return self.__dict__  
+            return {a: getattr(self, a) for a in attrs if a in self.__dict__}
 
-            return {attr: getattr(self, attr) for attr in attrs if attr in self.__dict__}
-                        
         return self.__dict__
