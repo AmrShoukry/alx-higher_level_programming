@@ -12,3 +12,4 @@ for arg in sys.argv:
     args.append(arg)
 
 save_to_json_file(args, "add_item.json")
+load_from_json_file("add_item.json")
