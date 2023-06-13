@@ -1,8 +1,6 @@
 #!/usr/bin/python3
 """ Model """
 
-import json
-
 
 def append_after(filename="", search_string="", new_string=""):
     """ Function """
