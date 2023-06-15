@@ -62,3 +62,12 @@ class Square(Rectangle):
                 if key == "y":
                     super().check_validation("y", value)
                     self.y = value
+
+    def to_dictionary(self):
+        """ Convert class into dictionary """
+        return {
+                "id": self.id,
+                "x": self.x,
+                "size": self.__size,
+                "y": self.y
+            }

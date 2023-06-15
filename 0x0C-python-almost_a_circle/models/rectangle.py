@@ -141,3 +141,13 @@ class Rectangle(Base):
                 if key == "y":
                     self.check_validation("y", value)
                     self.__y = value
+
+    def to_dictionary(self):
+        """ Convert class into dictionary """
+        return {
+                "x": self.__x,
+                "y": self.__y,
+                "id": self.id,
+                "height": self.__height,
+                "width": self.__width
+            }
