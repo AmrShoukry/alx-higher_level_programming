@@ -24,4 +24,41 @@ class Square(Rectangle):
     def size(self, size):
         """ size setter """
         super().check_validation("width", size)
+        self.width = size
+        self.height = size
         self.__size = size
+
+    def update(self, *args, **kwargs):
+        """ Update the existence arguments """
+        if len(args) > 0:
+            self.id = args[0]
+            try:
+                super().check_validation("width", args[1])
+                self.__size = args[1]
+            except Exception:
+                pass
+
+            try:
+                super().check_validation("x", args[2])
+                self.x = args[2]
+            except Exception:
+                pass
+
+            try:
+                super().check_validation("y", args[3])
+                self.y = args[3]
+            except Exception:
+                pass
+        else:
+            for key, value in kwargs.items():
+                if key == "id":
+                    self.id = value
+                if key == "size":
+                    super().check_validation("width", value)
+                    self.__size = value
+                if key == "x":
+                    super().check_validation("x", value)
+                    self.x = value
+                if key == "y":
+                    super().check_validation("y", value)
+                    self.y = value

@@ -66,7 +66,7 @@ class Rectangle(Base):
         return self.__y
 
     @y.setter
-    def height(self, y):
+    def y(self, y):
         """ y setter """
         self.check_validation("y", y)
         self.__y = y
