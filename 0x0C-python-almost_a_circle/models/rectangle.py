@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """ Rectanlge Class Module """
 
 from models.base import Base

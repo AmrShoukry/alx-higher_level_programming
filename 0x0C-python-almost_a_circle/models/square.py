@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """ Square Class Model """
 
 from models.rectangle import Rectangle
