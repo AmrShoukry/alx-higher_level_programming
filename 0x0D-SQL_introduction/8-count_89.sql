@@ -1,2 +1,2 @@
 -- Task 8
-SELECT COUNT(*) FROM `first_table` HAVING id = 89
+SELECT COUNT(*) FROM `first_table` WHERE `id` = 89
