@@ -1,0 +1,2 @@
+-- Task3
+SHOW TABLES
