@@ -10,8 +10,9 @@ const numbers = argv.map(function (value) {
 if (numbers.length < 2) {
   console.log(0);
 }
-
-let maxIndex = numbers.indexOf(Math.max(...numbers));
-numbers.splice(maxIndex, 1);
-maxIndex = numbers.indexOf(Math.max(...numbers));
-console.log(numbers[maxIndex]);
+else {
+  let maxIndex = numbers.indexOf(Math.max(...numbers));
+  numbers.splice(maxIndex, 1);
+  maxIndex = numbers.indexOf(Math.max(...numbers));
+  console.log(numbers[maxIndex]);  
+}
