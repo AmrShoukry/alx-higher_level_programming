@@ -13,5 +13,5 @@ if (numbers.length < 2) {
   let maxIndex = numbers.indexOf(Math.max(...numbers));
   numbers.splice(maxIndex, 1);
   maxIndex = numbers.indexOf(Math.max(...numbers));
-  console.log(numbers[maxIndex]);  
+  console.log(numbers[maxIndex]);
 }
