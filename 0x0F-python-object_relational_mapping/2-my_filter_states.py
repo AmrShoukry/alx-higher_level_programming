@@ -23,7 +23,7 @@ if __name__ == '__main__':
     CURSOR = CONNECTION.cursor()
 
     query = "SELECT * FROM states WHERE name = %s"
-    arguments = (sys.argv[4],)
+    arguments = (STATE,)
 
     CURSOR.execute(query, arguments)
 
