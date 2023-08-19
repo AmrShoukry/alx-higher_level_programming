@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" 10. Get a state """
+""" 11. Add a new state """
 import sys
 from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base

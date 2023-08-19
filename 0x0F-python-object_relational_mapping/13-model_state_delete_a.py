@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" 12. Update a state """
+""" 13. Delete states """
 import sys
 from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
@@ -16,8 +16,9 @@ if __name__ == "__main__":
 
     session = sessionmaker(bind=engine)()
 
-    state = session.query(State).filter(State.id == 2).first()
-    state.name = 'New Mexico'
-    session.commit()
+    states = session.query(State).filter(State.name.contains('a')).all()
+    for state in states:
+        session.delete(state)
+        session.commit()
 
     session.close()
