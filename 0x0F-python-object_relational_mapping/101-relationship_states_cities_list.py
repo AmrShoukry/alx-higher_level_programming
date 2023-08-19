@@ -6,16 +6,12 @@ from sqlalchemy.orm import sessionmaker
 from relationship_state import Base, State
 from relationship_city import City
 
-import os
-ROOT_PATH = os.path.dirname(os.path.realpath(__file__))
-DB_URI = os.path.join(ROOT_PATH, 'my_database.db')
-engine = create_engine(f"sqlite:///{DB_URI}")
 
 if __name__ == "__main__":
-    # engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format(
-    #     sys.argv[1],
-    #     sys.argv[2],
-    #     sys.argv[3]), pool_pre_ping=True)
+    engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format(
+        sys.argv[1],
+        sys.argv[2],
+        sys.argv[3]), pool_pre_ping=True)
     Base.metadata.create_all(engine)
 
     session = sessionmaker(bind=engine)()
@@ -24,7 +20,7 @@ if __name__ == "__main__":
 
     for state in states:
         print(f"{state.id}: {state.name}")
-        # sorted_cities = sorted(state.cities, key=lambda city: city.id)
+        sorted_cities = sorted(state.cities, key=lambda city: city.id)
         for city in state.cities:
             print(f"    {city.id}: {city.name}")
 
