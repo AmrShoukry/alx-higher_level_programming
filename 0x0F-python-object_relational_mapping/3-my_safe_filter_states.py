@@ -24,7 +24,7 @@ if __name__ == '__main__':
 
     query = "SELECT * FROM states WHERE name LIKE BINARY %s ORDER BY id ASC"
     arguments = (STATE, )
-         
+
     CURSOR.execute(query, arguments)
 
     result = CURSOR.fetchall()
