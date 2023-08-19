@@ -1,7 +1,7 @@
 #!/usr/bin/python3
+""" 0. Get all states """
 import sys
 import MySQLdb
-""" 0. Get all states """
 
 if __name__ == '__main__':
     DB_HOST = 'localhost'
