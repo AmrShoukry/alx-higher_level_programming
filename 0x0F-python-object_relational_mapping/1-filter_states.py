@@ -1,7 +1,7 @@
 #!/usr/bin/python3
+""" 1. Filter states """
 import sys
 import MySQLdb
-""" 1. Filter states """
 
 
 if __name__ == '__main__':
