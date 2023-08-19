@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """ 14. Cities in state """
-from model_state import Base
+from relationship_state import Base
 from sqlalchemy import Column, Integer, String, ForeignKey
 from sqlalchemy.orm import relationship
 
@@ -13,6 +13,6 @@ class City(Base):
     name = Column(String(128), nullable=False)
     state_id = Column(Integer(),
                       ForeignKey('states.id'),
-                      nullable=False, ondelete='CASCADE',
-                      onupdate='CASCADE')
-    state = relationship('State', backref="myStates", uselist=False)
+                      nullable=False,
+                      )
+    state = relationship('State', back_populates="cities", uselist=False)
