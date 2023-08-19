@@ -21,7 +21,8 @@ if __name__ == '__main__':
 
     CURSOR = CONNECTION.cursor()
 
-    CURSOR.execute("SELECT * FROM cities ORDER BY id ASC")
+    CURSOR.execute("SELECT cities.id, cities.name, states.name FROM cities\
+    INNER JOIN states ON cities.state_id = states.id ORDER BY cities.id ASC")
 
     result = CURSOR.fetchall()
     for row in result:
