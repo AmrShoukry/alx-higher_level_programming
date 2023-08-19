@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 import sys
 import MySQLdb
-# import mysql.connector
 """ 1. Filter states """
 
 
@@ -16,7 +15,7 @@ if __name__ == '__main__':
         host=DB_HOST,
         port=DB_PORT,
         user=DB_USER,
-        passwd='dB@200374',
+        passwd=DB_PASS,
         db=DB_NAME
     )
 
