@@ -22,7 +22,7 @@ if __name__ == '__main__':
 
     CURSOR = CONNECTION.cursor()
 
-    CURSOR.execute("SELECT * FROM states WHERE name =\
+    CURSOR.execute("SELECT * FROM states WHERE name LIKE BINARY\
     '{:s}' ORDER BY id ASC".format(STATE))
 
     # CURSOR.execute(query, arguments)
