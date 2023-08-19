@@ -21,7 +21,7 @@ if __name__ == "__main__":
     for state in states:
         print(f"{state.id}: {state.name}")
         sorted_cities = sorted(state.cities, key=lambda city: city.id)
-        for city in state.cities:
+        for city in sorted_cities:
             print(f"    {city.id}: {city.name}")
 
     session.close()
