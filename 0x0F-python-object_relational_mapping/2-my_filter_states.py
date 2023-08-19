@@ -22,13 +22,14 @@ if __name__ == '__main__':
 
     CURSOR = CONNECTION.cursor()
 
-    query = "SELECT * FROM states WHERE name = %s"
+    query = "SELECT * FROM states WHERE name = %s ORDER BY id ASC"
     arguments = (STATE,)
 
     CURSOR.execute(query, arguments)
 
-    result = CURSOR.fetchone()
-    print(result)
-
+    result = CURSOR.fetchall()
+    for row in result:
+        print(row)
+    
     CURSOR.close()
     CONNECTION.close()
