@@ -1,3 +1,3 @@
 #!/bin/bash
 # 2. cURL Method
-curl -X DELETE $1
+curl -X -s DELETE $1
