@@ -1,7 +1,7 @@
 #!/usr/bin/node
 
 const request = require('request');
-const URL = `https://swapi-api.alx-tools.com/api/films/`;
+const URL = 'https://swapi-api.alx-tools.com/api/films/';
 
 request(URL, function (error, response, body) {
   if (error);
